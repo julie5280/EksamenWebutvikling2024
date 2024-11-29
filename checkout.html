@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="ikoner/css/fontawesome.css" rel="stylesheet" />
+    <link href="ikoner/css/brands.css" rel="stylesheet" />
+    <link href="ikoner/css/solid.css" rel="stylesheet" />
+    <link href="ikoner/css/regular.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Check Out</title>
+</head>
+<body>
+    <nav class="skip">
+        <ul>
+            <li><a href="#search">Hopp til søk </a></li>
+            <li><a href="index.html">Hopp til forside</a></li>
+            <li><a href="#shoppinbagen">Hopp til shoppinbagen</a></li>
+            <li><a href="#opplysninger">Hopp til Opplysninger</a></li>
+            <li><a href="#levering">Hopp til levering</a></li>
+            <li><a href="#betaling">Hopp til betaling</a></li>
+            <li><a href="#footer-grid">Hopp til kontakt oss</a></li>
+            
+        </ul>
+    </nav>
+    <header id="top-header"> 
+        <nav id="header-nav">
+            <form>
+                <label>
+                    <input type="search" placeholder="søk her" id="search">
+                    <i class="fa-solid fa-magnifying-glass" title="søk"></i>
+                </label>
+            </form>
+            <ul id="nav-links">
+                <li><a href="index.html" aria-label="Gå til hjem">Hjem</a></li>
+                <li><a href="index.html#produkt-sec" aria-label="Gå til produkter">Produkter</a></li>
+                <li class="logo"><a href="index.html" aria-label="">Logo</a></li>
+                <li><a href="index.html#cat" aria-label="">kategorier</a></li>
+                <li><a href="checkout.html#logo-footer-section" aria-label="">kontakt oss</a></li>
+            </ul>
+            <ul id="icon-links">
+                <li><a href="#" aria-label=""><i class="fa-regular fa-user"></i></a></li>
+                <li><a href="#" aria-label=""><i class="fa-regular fa-heart"></i></a></li>
+                <li><a href="checkout.html" aria-label=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <i class="fa-solid fa-arrow-left"> </i>Forsett å handle
+        <h2>kasse</h2>
+        <div id="flex-container">
+        <section id="shoppinbagen">
+            <h2>1.Shoppinbagen din</h2>
+            <article>
+                <img src="img/kjole.jpg" alt="">
+                <header><h3>Produkt name</h3>
+                <p>kr: 1999</p>
+                <p>farge: beige</p>
+            </header>
+            <form >
+                <label for="size">Størelse:</label>
+                <select name="size" id="size">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+                <label for="quantity">Antall:</label>
+                <input type="number" id="quantity" value="1" min="1">
+                
+            </form>
+            <ul>
+                <li><i class="fa-regular fa-heart"></i></li>
+                <li><i class="fa-solid fa-trash"></i></li>    
+            </ul>
+            </article>
+            <article>
+                <img src="img/kjole.jpg" alt="">
+                <header><h3>Produkt name</h3>
+                <p>kr: 1999</p>
+                <p>farge: beige</p>
+            </header>
+            <form >
+                <label for="mesurement">Størelse:</label>
+                <select name="size" id="mesurement">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+                <label for="antall">Antall:</label>
+                <input type="number" id="antall" value="1" min="1">
+            </form>
+            <ul>
+                <li><i class="fa-regular fa-heart"></i></li>
+                <li><i class="fa-solid fa-trash"></i></li>    
+            </ul>
+            </article>
+        </section>
+        <section id="opplysninger">
+            <h2>2.Dine opplysninger</h2>
+            <form action="#" method="post" id="opplysninger-grid">
+                <h3>leveringsadresse</h3>
+                <label for="fornavn" id="fornavn-label">Fornavn</label>
+                <input type="text" id="fornavn" pattern="[A-Za-zæøåÆØÅ ]{2,}" maxlength="50" placeholder="ole" required>
+
+                <label for="etternavn" id="etternavn-label">Etternavn</label>
+                <input type="text" id="etternavn" name="etternavn" pattern="[A-Za-zæøåÆØÅ ]{2,}" maxlength="50" placeholder="normann" required>
+
+                <label for="gateadresse" id="gateadresse-label">Gateadresse</label>
+                <!--hentet patern fra chatgpt-->
+                <input type="text" id="gateadresse" pattern="^[\w\s,.-]+$" placeholder="ole normannvei 5" maxlength="100" name="gateadresse" required>
+                <label for="post-nummer" id="postnummer-label">Postnummer</label>
+                
+                <input type="number" id="post-nummer" name="post-nummer" placeholder="1743"  required>
+                <label for="poststed" id="poststed-label">Poststed</label>
+                <input type="text" id="poststed" name="poststed" maxlength="50" placeholder="skjeberg" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
+            </form>
+            <form action="#" method="post">
+                <h3>kontaktinformasjon</h3>
+                <label for="E-post">E-post</label>
+                <input type="email" id="E-post" name="E-post" placeholder="epost@gmail.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required maxlength="70">
+                <label for="Telefon"> Telefon</label>
+                <!--spørte om pattern til telefon-->
+                <input type="tel" id="Telefon" name="Telefon"  pattern="^\d{8}$" placeholder="48263423" required>
+                <input type="button" value="Lagre" id="lagre">
+            <a href="">Avbryt</a>
+            </form>
+            
+
+        </section>
+        <section id="levering">
+            <h2>3.Levering</h2>
+            <ul>
+                <li>
+                    <input type="radio" id="exress-home">
+                    <label for="exress-home">exspress hjemlevering</label>
+                    <p class="virkedager">3-4 virkedager</p>
+                        <p>59kr<i class="fa-solid fa-truck"></i></p>
+                        <p>bestill hverdag før 08:00 for levering neste arbeidsdag. leveris hjem til deg før frokost madag til lørdag.
+                            for levering til postnummer 4000-7999 er leveringstiden 2 arbeidsdager, for postnummer 8000-9999 er leveringstiden 3 arbeidsdager.</p>
+                        
+
+                    
+                </li>
+                <li>
+                    <input type="radio" id="ekspress-ut" aria-label="Ekspress-levering">
+                    <label for="ekspress-ut">Ekspress Pakke til utleveringssted</label>
+                    <p class="virkedager">1-3 virkedager</p>
+                        <p>59kr<i class="fa-solid fa-truck"></i></p>
+                </li>
+                <li>
+                    <input type="radio" id="standar-lev"  aria-label=" valg av standar levering">
+                    <label for="standar-lev">Standar hjemlevering</label>
+                    <p class="virkedager">5-8 virkedager</p>
+                        <p>Gratis<i class="fa-solid fa-truck"></i></p>
+                        <p>Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager</p>
+                </li>
+            </ul>
+        </section>
+        <section id="betaling">
+            <h2>4.betaling</h2>
+            <h3>Betal med kort</h3>
+            <form action="#" >
+                <label for="kortnr" id="kortnr-label">Kortnummer</label>
+                <input type="number" id="kortnr"  aria-label="Kortnummer"  placeholder="1233214532789" required>
+                <label for="utløpsdato" id="utløpsdato-label">Utløpsdato</label>
+                <input type="date" id="utløpsdato"  aria-label=" legg inn utløpsdato" required>
+                <label for="cvc" id="cvc-label">CVC/CVV</label>
+                <input type="number" id="cvc"  aria-label="legg in cvc"  placeholder="375" required>
+            </form>
+            <hr>
+            <p>å belate inkl. mva</p>
+            <strong>1199kr</strong>
+            <a href="#">Fullfør kjøp</a>
+            <p>du bekrefter heved at opplysningene og dokumentene du har oppgitt er korekte og fulstenndige. 
+               leverandøren forbeholder seg retten til å heve eller avslutte avtalefoholdet dersom det foreligger uriktige eller ufulstendige opplysninger</p>
+               <input type="checkbox" id="nyhetsbrev"  aria-label="avkryssing nyhetsbrev">
+               <label for="nyhetsbrev"> Ja takk! send nyhetsbrev til meg</label>
+               <input type="checkbox" id="tilbud"  aria-label="avkryssing tilbud">
+               <label for="tilbud"> Jeg ønsker å motta tekstmeldinger med nyheter og tilbud</label>
+               
+        </section>
+
+        
+    </div>
+    </main>
+    <a href="#top-header" id="totop" aria-label="Til top"><i class="fa-solid fa-caret-up"></i></a>
+    <footer>
+        <div class="footer-grid">
+        <section id="logo-footer-section">
+            <h2>Logo</h2>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
+        </section>
+        <section id="kontakt-footer-section">
+          <h3>kontakt</h3>
+          <ul>
+            <li><i class="fa-solid fa-location-dot"></i><strong>Adresse:</strong> B R A Veien 4, 1757 Halden</li>
+            <li><i class="fa-solid fa-phone"></i><strong>Telefon:</strong></li>
+            <li><i class="fa-solid fa-envelope"></i><strong>E-post:</strong> halden@hiof.no</li>
+            <li><i class="fa-solid fa-clock"></i> <strong>Åpningstider:</strong> stenger 15:00</li>
+          </ul>
+        </section>
+        <section id="Snarveier-footer-section">
+            <h3>Snarveier</h3>
+            <ul>
+                <li><a href="index.html#produkt-sec" aria-label="tilbake til produkter">Produkter</a></li>
+                <li><a href="index.html#cat" aria-label="tilbake til kategorier">Kategorier</a></li>
+                <li><a href="#logo-footer-section" aria-label="kontakt informasjon">Kontakt oss</a></li>
+                <li><a href="../EksamenWebutvikling2024/ressurser/WCAG-sjekkliste for utfylling av tilgjengelighetserklæring for nettløsning eksamen.pdf" aria-label="tilgjengelighetserklæring">Tilgjengelighetserklæring</a></li>
+            </ul>
+        </section>
+        <section id="some-footer-section">
+            <h3>sosiale medier</h3>
+            <ul>
+                <li><i class="fa-brands fa-instagram"></i></li>
+                <li><i class="fa-brands fa-facebook"></i></li>
+                <li><i class="fa-brands fa-linkedin"></i></li>
+                <li><i class="fa-brands fa-pinterest"></i></li>
+            </ul>
+        </section>
+    </div>
+        
+    </footer>
+</body>
+</html>
